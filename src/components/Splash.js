@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../../src/styles/main.scss';
 
-export default function Splash() {
+export default class Splash extends Component {
+  constructor() {
+    super();
+    this.state = {
+    }
+  }
 
-  return(
-    <div>
-      <button>splash</button>
-    </div>
-  )
-
+  render() {
+    return(
+      <div>
+        <button onClick={this.props.toggleSplash}>start</button>
+      </div>
+    )
+  }
 };
 
