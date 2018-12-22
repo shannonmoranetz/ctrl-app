@@ -11,9 +11,7 @@ export default class Circle extends Component {
 
   render() {
     return(
-      <div>
-        <div className="circle-element">circle</div>
-      </div>
+      <div className="circle-element">circle</div>
     )
   };
 };

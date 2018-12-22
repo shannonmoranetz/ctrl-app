@@ -1,3 +1,10 @@
 .circle-element {
-  color: white;
+  color: black;
+  height: 350px;
+  width: 350px;
+  background-color: $circle-color;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
