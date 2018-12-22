@@ -22,14 +22,14 @@ export default class App extends Component {
   render() {
     if (this.state.renderSplash) {
       return (
-        <div>
-          <h1 className="app-title">app</h1>
+        <div className="splash-container">
           <Splash toggleSplash={this.toggleSplash}/>
+          <h1 className="app-title">app</h1>
         </div>
       )
     } else {
       return(
-        <div>
+        <div className="app-container">
           <Message />
           <Button />
           <Options toggleSplash={this.toggleSplash}/>
