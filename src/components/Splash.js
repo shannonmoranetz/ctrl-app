@@ -12,7 +12,7 @@ export default class Splash extends Component {
   render() {
     return(
       <div>
-        <button className="start-button" onClick={{this.props.toggleSplash} + {this.props.addClass}}>
+        <button className="start-button" onClick={this.props.toggleSplash}>
         breathe</button>
       </div>
     )

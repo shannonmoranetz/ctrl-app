@@ -2,7 +2,7 @@
   color: black;
   height: 350px;
   width: 350px;
-  background-color: powderblue;
+  background-color: $start-color;
   background-image: url("../../src/images/start-circle.png");
   background-size: 350px;
   background-repeat: no-repeat;
@@ -10,15 +10,45 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translate(0px, -74px);
   font-size: 50px;
   text-shadow: 2px 2px white;
+  animation: pulse 10s infinite;
 }
 
+.start-button:hover {
+  display: inline-block;
+  animation: hover-ripple linear .7s, push-in .7s 1;
+}
 
+@keyframes push-in{
+  50% {
+    transform: scale(.95)
+  }
+}
 
-// .transition {
-//   transition-duration: 2s;
-//   transition-timing-function: linear;
-//   transition-delay: 1s;
-// }
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #B5DAE1;
+  }
+  25% {
+    box-shadow: 0 0 20px 10px #f7edeb;
+  }
+  50% {
+      box-shadow: 0 0 40px 20px #f7edeb;
+  }
+  100% {
+      box-shadow: 0 0 0 0 #04485D;
+  }
+}
+
+@keyframes hover-ripple {
+  0% {
+    box-shadow: 0 0 0 0 #B5DAE1;
+  }
+  50% {
+    box-shadow: 0px 0px 10px 10px white;
+  }
+  100% {
+    box-shadow: 0px 0px 0px 0px transparent;
+  }
+}

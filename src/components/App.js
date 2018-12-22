@@ -5,6 +5,7 @@ import Message from './Message'
 import Options from './Options'
 import '../../src/styles/main.scss';
 
+
 export default class App extends Component {
   constructor() {
     super();
@@ -17,18 +18,19 @@ export default class App extends Component {
     this.setState({
       renderSplash: !this.state.renderSplash
     });
+    // this.addClass();
   };
 
-  addClass = () => {
-    if (this.state.renderSplash === false) {
-      return 'fade-out';
-    }
-  }
+  // addClass = () => {
+  //   if (this.state.renderSplash === false) {
+  //     return 'fade-out';
+  //   }
+  // }
 
   render() {
     if (this.state.renderSplash) {
       return (
-        <div className={`splash-container ${this.addClass()}`}>
+        <div className="splash-container">
           <h1 className="app-title">ctrl</h1>
           <Splash toggleSplash={this.toggleSplash}
                   addClass={this.addClass}/>
