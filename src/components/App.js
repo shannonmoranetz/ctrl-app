@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Splash from './Splash'
 import Button from './Button'
 import Message from './Message'
+import Options from './Options'
 import '../../src/styles/main.scss';
 
 export default class App extends Component {
@@ -31,6 +32,7 @@ export default class App extends Component {
         <div>
           <Message />
           <Button />
+          <Options toggleSplash={this.toggleSplash}/>
         </div>
       )
     }  
