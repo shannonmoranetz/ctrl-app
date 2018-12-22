@@ -2,10 +2,16 @@
   color: black;
   height: 350px;
   width: 350px;
-  background-color: $circle-color;
+  background-color: powderblue;
+  background-image: url("../../src/images/start-circle.png");
+  background-size: 350px;
+  background-repeat: no-repeat;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: translate(0px, -74px);
+  font-size: 50px;
+  // box-shadow: 2px 2px 2px 2px $border-color;
+  text-shadow: 2px 2px white;
 }

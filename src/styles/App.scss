@@ -12,7 +12,8 @@ body {
 }
 
 .splash-container {
-  background-color: $splash-bg-color;
+  background-image: url("../../src/images/splash-bg.jpg");
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,9 +25,11 @@ body {
 .app-title {
   font-size: 80px;  
   transform: translate(0px, -74px);
+  text-shadow: 3px 3px black;
 }
 
 .app-subtitle {
   font-size: 40px;
   font-family: 'Satisfy', cursive;
+  text-shadow: 2px 2px black;
 }
