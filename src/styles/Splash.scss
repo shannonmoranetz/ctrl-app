@@ -17,7 +17,17 @@
 
 .start-button:hover {
   display: inline-block;
-  animation: hover-ripple linear .7s, push-in .7s 1;
+  color: white;
+  animation: hover-ripple linear .7s, push-in .7s 1, text-fade forwards 3s;
+}
+
+@keyframes text-fade {
+  0% {
+    text-shadow: 0 0 2px 2px black;
+  }
+  100% {
+    text-shadow: 4px 4px #04485D;
+  }
 }
 
 @keyframes push-in{

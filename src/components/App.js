@@ -18,14 +18,7 @@ export default class App extends Component {
     this.setState({
       renderSplash: !this.state.renderSplash
     });
-    // this.addClass();
   };
-
-  // addClass = () => {
-  //   if (this.state.renderSplash === false) {
-  //     return 'fade-out';
-  //   }
-  // }
 
   render() {
     if (this.state.renderSplash) {
