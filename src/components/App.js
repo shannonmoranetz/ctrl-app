@@ -9,9 +9,9 @@ export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      renderSplash: true
+      renderSplash: true,
     };
-  }; 
+  };
 
   toggleSplash = () => {
     this.setState({
@@ -19,12 +19,19 @@ export default class App extends Component {
     });
   };
 
+  addClass = () => {
+    if (this.state.renderSplash === false) {
+      return 'fade-out';
+    }
+  }
+
   render() {
     if (this.state.renderSplash) {
       return (
-        <div className="splash-container">
+        <div className={`splash-container ${this.addClass()}`}>
           <h1 className="app-title">ctrl</h1>
-          <Splash toggleSplash={this.toggleSplash}/>
+          <Splash toggleSplash={this.toggleSplash}
+                  addClass={this.addClass}/>
           <h2 className="app-subtitle">( control )</h2>
         </div>
       )

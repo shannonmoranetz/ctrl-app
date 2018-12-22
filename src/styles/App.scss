@@ -22,6 +22,23 @@ body {
   height: 100vh;
 }
 
+.fade-out {
+	opacity: 0;
+	animation-name: fadeOutOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-duration: 5s;
+}
+
+@keyframes fadeOutOpacity {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
 .app-title {
   font-size: 80px;  
   transform: translate(0px, -74px);
