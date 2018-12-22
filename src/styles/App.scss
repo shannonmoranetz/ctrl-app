@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  font-family: 'Indie Flower', cursive;
 }
 
 .app-container {
@@ -21,5 +22,11 @@ body {
 }
 
 .app-title {
-  margin-top: 50px;
+  font-size: 80px;  
+  transform: translate(0px, -74px);
+}
+
+.app-subtitle {
+  font-size: 40px;
+  font-family: 'Satisfy', cursive;
 }
