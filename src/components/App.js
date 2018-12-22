@@ -23,8 +23,8 @@ export default class App extends Component {
     if (this.state.renderSplash) {
       return (
         <div className="splash-container">
-          <h1 className="app-title">app</h1>
           <Splash toggleSplash={this.toggleSplash}/>
+          <h1 className="app-title">app</h1>
         </div>
       )
     } else {

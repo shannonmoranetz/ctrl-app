@@ -10,7 +10,7 @@ export default class Options extends Component {
 
   render() {
     return(
-      <div>
+      <div className="options-container">
         <button onClick={this.props.toggleSplash}>reset</button>
       </div>
     )
