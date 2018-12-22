@@ -2,17 +2,9 @@ body {
   background-color: $app-bg-color;
 }
 
-
-
-
-
-
-
-
-  // display: grid;
-  // grid-template-rows: 1fr 1fr 1fr;
-  // grid-template-columns: 1fr 1fr 1fr;
-  // grid-template-areas: 
-  // "empty message message"
-  // "empty main none"
-  // "options footer none";
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}

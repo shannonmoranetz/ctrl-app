@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../../src/styles/main.scss';
 
-export default class Button extends Component {
+export default class Circle extends Component {
   constructor() {
     super();
     this.state = {
@@ -12,7 +12,7 @@ export default class Button extends Component {
   render() {
     return(
       <div>
-        <button>button</button>
+        <div className="circle-element">circle</div>
       </div>
     )
   };

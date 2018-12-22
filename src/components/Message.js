@@ -5,7 +5,7 @@ export default function Message() {
 
   return(
     <div>
-      <h2>message</h2>
+      <h2 className="message-text">message</h2>
     </div>
   )
 
