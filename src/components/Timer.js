@@ -10,19 +10,34 @@ export default class Timer extends React.Component {
     }
   }
 
-  componentWillMount () {
+  componentWillMount() {
     this.startTimer()
     this.setPrompt()
   }
-
-  componentWillUnmount () {
+    
+  componentWillUnmount() {
     clearInterval(this.timer)
   }
 
   tick () {
     this.setState({
-      count: (this.state.count + 1)
+      count: (this.state.count + 1),
     })
+    if (this.state.count === 4) {
+      this.setState({
+        prompt: 'cond 1'
+      })
+    }
+    else if (this.state.count === 5) {
+      this.setState({
+        prompt: 'cond 2'
+      })
+    }
+    else {
+      this.setState({
+        prompt: 'cond 3'
+      })
+    }
   }
 
   startTimer () {
@@ -30,31 +45,13 @@ export default class Timer extends React.Component {
     this.timer = setInterval(this.tick.bind(this), 1000)
   }
 
-  stopTimer () {
-    clearInterval(this.timer)
-  }
-
   setPrompt() {
-    if (this.state.timer === 4) {
-      this.setState({
-        prompt: 'hold'
-      })
-    }
-    else if (this.state.timer === 7) {
-      this.setState({
-        prompt: 'exhale'
-      })
-    }
-    else {
-      this.setState({
-        prompt: 'inhale'
-      })
-    }
+
   }
 
   render () {
     return (
-      <div className='breathing-instructions'>
+      <div className='counter-container'>
         <h2 className='breathing-instructions'>{this.state.prompt}</h2>        
         <h1 className='second-display'>{this.state.count}</h1>
       </div>   
