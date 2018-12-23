@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../../src/styles/main.scss';
 
-export default class Timer extends React.Component {
+export default class Timer extends Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -30,15 +30,24 @@ export default class Timer extends React.Component {
     this.updateSeconds()
     if (this.state.count < 5) {
       this.setState({
-        prompt: 'inhale'
+        prompt: 'inhale',
+        inhaleTrue: true,
+        holdTrue: false,
+        exhaleTrue: false
       })
     } else if (this.state.count > 4 && this.state.count < 12) {
       this.setState({
-        prompt: 'hold'
+        prompt: 'hold',
+        inhaleTrue: false,
+        holdTrue: true,
+        exhaleTrue: false
       })
     } else if (this.state.count > 11 && this.state.count < 20) {
       this.setState({
-        prompt: 'exhale'
+        prompt: 'exhale',
+        inhaleTrue: false,
+        holdTrue: false,
+        exhaleTrue: true
       })
     } else {
       this.setState({
@@ -50,9 +59,19 @@ export default class Timer extends React.Component {
 
   updateSeconds() {
     if (this.state.seconds === 0) {
-      this.setState({
-        seconds: 10
-      })
+      if (this.state.inhaleTrue === true) {
+        this.setState({
+          seconds: 7
+        })
+      } else if (this.state.holdTrue === true) {
+        this.setState({
+          seconds: 8
+        })
+      } else if (this.state.exhaleTrue === true) {
+        this.setState({
+          seconds: 4
+        })
+      } 
     }
   }
 
@@ -60,7 +79,6 @@ export default class Timer extends React.Component {
     clearInterval(this.timer)
     this.timer = setInterval(this.tick.bind(this), 1000)
   }
-
 
   render() {
     return (
