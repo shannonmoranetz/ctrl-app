@@ -6,7 +6,7 @@ export default class Timer extends React.Component {
     super(props);
     this.state = {
       count: 1,
-      prompt: ''
+      prompt: 'inhale'
     }
   }
 
@@ -23,19 +23,20 @@ export default class Timer extends React.Component {
     this.setState({
       count: (this.state.count + 1),
     })
-    if (this.state.count === 4) {
+
+    if (this.state.count < 5) {
       this.setState({
-        prompt: 'cond 1'
+        prompt: 'inhale'
       })
     }
-    else if (this.state.count === 5) {
+    else if (this.state.count > 4 && this.state.count < 11) {
       this.setState({
-        prompt: 'cond 2'
+        prompt: 'hold'
       })
     }
     else {
       this.setState({
-        prompt: 'cond 3'
+        prompt: 'exhale'
       })
     }
   }
