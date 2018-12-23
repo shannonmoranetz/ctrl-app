@@ -12,7 +12,6 @@ export default class Timer extends React.Component {
 
   componentWillMount() {
     this.startTimer()
-    this.setPrompt()
   }
     
   componentWillUnmount() {
@@ -21,22 +20,24 @@ export default class Timer extends React.Component {
 
   tick () {
     this.setState({
-      count: (this.state.count + 1),
+      count: (this.state.count + 1)
     })
-
     if (this.state.count < 5) {
       this.setState({
         prompt: 'inhale'
       })
-    }
-    else if (this.state.count > 4 && this.state.count < 11) {
+    } else if (this.state.count > 4 && this.state.count < 12) {
       this.setState({
         prompt: 'hold'
       })
-    }
-    else {
+    } else if (this.state.count > 11 && this.state.count < 20) {
       this.setState({
         prompt: 'exhale'
+      })
+    } else {
+      this.setState({
+        prompt: 'inhale',
+        count: 1
       })
     }
   }
@@ -46,9 +47,6 @@ export default class Timer extends React.Component {
     this.timer = setInterval(this.tick.bind(this), 1000)
   }
 
-  setPrompt() {
-
-  }
 
   render () {
     return (
