@@ -1,13 +1,18 @@
 .counter-container {
-  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .breathing-instructions {
-  font-size: 60px;
+  font-size: 75px;
   color: white;
+  margin-top: 125px;
 }
 
 .second-display {
-  font-size: 60px;
+  font-size: 140px;
+  font-family: Lilita One;
+  margin-top: -70px;
   color: white;
 }
