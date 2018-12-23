@@ -6,7 +6,11 @@ export default class Timer extends React.Component {
     super(props);
     this.state = {
       count: 1,
-      prompt: 'inhale'
+      seconds: 4,
+      prompt: 'inhale',
+      inhaleTrue: true,
+      holdTrue: false,
+      exhaleTrue: false
     }
   }
 
@@ -18,10 +22,12 @@ export default class Timer extends React.Component {
     clearInterval(this.timer)
   }
 
-  tick () {
+  tick() {
     this.setState({
-      count: (this.state.count + 1)
+      count: (this.state.count + 1),
+      seconds: (this.state.seconds - 1)
     })
+    this.updateSeconds()
     if (this.state.count < 5) {
       this.setState({
         prompt: 'inhale'
@@ -42,17 +48,25 @@ export default class Timer extends React.Component {
     }
   }
 
-  startTimer () {
+  updateSeconds() {
+    if (this.state.seconds === 0) {
+      this.setState({
+        seconds: 10
+      })
+    }
+  }
+
+  startTimer() {
     clearInterval(this.timer)
     this.timer = setInterval(this.tick.bind(this), 1000)
   }
 
 
-  render () {
+  render() {
     return (
       <div className='counter-container'>
         <h2 className='breathing-instructions'>{this.state.prompt}</h2>        
-        <h1 className='second-display'>{this.state.count}</h1>
+        <h1 className='second-display'>{this.state.seconds}</h1>
       </div>   
     )
   }
