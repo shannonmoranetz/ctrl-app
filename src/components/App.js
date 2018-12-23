@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Splash from './Splash'
-import Circle from './Circle'
-import Message from './Message'
-import Options from './Options'
+import Splash from './Splash';
+import Circle from './Circle';
+import Message from './Message';
+import Options from './Options';
 import '../../src/styles/main.scss';
 
 
@@ -31,7 +31,7 @@ export default class App extends Component {
         </div>
       )
     } else {
-      return(
+      return (
         <div className="app-container">
           <Message />
           <Circle />
