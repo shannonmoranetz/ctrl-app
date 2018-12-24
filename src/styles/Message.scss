@@ -6,7 +6,7 @@
   margin-top: 60px;
   border-radius: 20px;
   overflow: hidden;
-  animation: slide-in 19s infinite;
+  animation: slide-in-out 19s infinite;
 }
 
 .message-text { 
@@ -16,19 +16,21 @@
   margin: 15px;
 }
 
-@keyframes slide-in {
+@keyframes slide-in-out {
   0% {
     transform: translate3d(200%, 0, 0);
-    visibility: visible;
+    box-shadow: 0 0 5px 5px #047178;
   }
   10% {
     transform: translate3d(0, 0, 0);
+    box-shadow: 0 0 10px 8px #058F90;
   }
   90% {
     transform: translate3d(0, 0, 0);
+    box-shadow: 0 0 10px 8px #058F90;
   }
   100% {
     transform: translate3d(200%, 0, 0);
-    visibility: visible;
+    box-shadow: 0 0 5px 5px #047178;
   }
 }
