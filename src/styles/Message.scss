@@ -1,13 +1,15 @@
 .message-container {
-  background-color: #EDD7ED;
+  background-color: rgba(145, 208, 215, .8);
   height: 100px;
   width: 400px;
   margin-left: 700px;
   margin-top: 60px;
   border-radius: 20px;
+  overflow: hidden;
 }
 
 .message-text { 
+  word-wrap: break-word;
   color: white;
   position: relative;
   margin: 15px;

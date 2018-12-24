@@ -16,3 +16,34 @@
   justify-content: center;  
   margin-bottom: 20px;
 }
+
+.reset-button:hover {
+  animation: hover-ripple linear .7s, push-in .7s 1, text-fade forwards 3s;
+}
+
+@keyframes push-in{
+  50% {
+    transform: scale(.95)
+  }
+}
+
+@keyframes text-fade {
+  0% {
+    text-shadow: 0 0 2px 2px black;
+  }
+  100% {
+    text-shadow: 4px 4px #04485D;
+  }
+}
+
+@keyframes hover-ripple {
+  0% {
+    box-shadow: 0 0 0 0 #B5DAE1;
+  }
+  50% {
+    box-shadow: 0px 0px 1px 1px white;
+  }
+  100% {
+    box-shadow: 0px 0px 0px 0px transparent;
+  }
+}
