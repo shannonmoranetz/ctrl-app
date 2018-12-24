@@ -5,12 +5,11 @@ import Message from './Message';
 import Options from './Options';
 import '../../src/styles/main.scss';
 
-
 export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      renderSplash: true,
+      renderSplash: true
     };
   };
 
