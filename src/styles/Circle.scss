@@ -15,18 +15,15 @@
 
 @keyframes breathing-pulse {
   0% {
-    box-shadow: 0 0 0 0 #B5DAE1;
+    box-shadow: 0 0 5px 5px #04485D;
   }
-  15% {
-    box-shadow: 0 0 40px 40px $circle-color;
+  20% {
+    box-shadow: 0 0 35px 35px $circle-color;
   }
   55% {
-    box-shadow: 0 0 40px 40px white;
-  }
-  90% {
-    box-shadow: 0 0 5px 5px $circle-color;
+    box-shadow: 0 0 35px 35px white;
   }
   100% {
-      box-shadow: 0 0 0 0 #04485D;
+      box-shadow: 0 0 5px 5px #04485D;
   }
 }
