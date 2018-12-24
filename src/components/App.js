@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Splash from './Splash';
+import Bubbles from './Bubbles';
 import Circle from './Circle';
 import Message from './Message';
 import Options from './Options';
@@ -27,6 +28,7 @@ export default class App extends Component {
           <Splash toggleSplash={this.toggleSplash}
                   addClass={this.addClass}/>
           <h2 className="app-subtitle">( control )</h2>
+          <Bubbles />
         </div>
       )
     } else {
@@ -35,6 +37,7 @@ export default class App extends Component {
           <Message />
           <Circle />
           <Options toggleSplash={this.toggleSplash}/>
+          <Bubbles />
         </div>
       )
     }  

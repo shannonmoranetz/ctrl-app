@@ -25,6 +25,8 @@ body {
   justify-content: center;
   color: white;
   height: 100vh;
+  z-index: 1;
+  position: relative;
 }
 
 .app-title {
