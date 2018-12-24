@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import messageData from '../../src/messageData.js';
 import '../../src/styles/main.scss';
+var data = require('../../src/messageData.json');
 
 export default class Message extends Component {
   constructor() {
@@ -10,33 +10,30 @@ export default class Message extends Component {
       currentMessage: '',
       allMessages: []
     }
-  }; 
+  };
 
   componentWillMount() {
     this.startTimer()
-    this.createMsgArray()
+    this.createAllMessages()
   }
 
   componentWillUnmount() {
     clearInterval(this.timer)
   }
 
-  createMsgArray() {
-    let messageArray = Object.keys(messageData).map((msg) => {
-      return msg.message;
+  createAllMessages() {
+    let messageArray = data.map((currentMessage) => {
+      return currentMessage.message;
     })
     this.setState({
       allMessages: messageArray
     });
   }
 
-
-
-
-
-
-
-
+  generateRandomMessage() {
+    let newMessage = this.state.allMessages[Math.floor(Math.random() * this.state.allMessages.length)];
+    return newMessage;
+  }
 
   tick() {
     this.setState({
@@ -46,28 +43,13 @@ export default class Message extends Component {
 
   startTimer() {
     clearInterval(this.timer)
-    this.timer = setInterval(this.tick.bind(this), 1000)
+    this.timer = setInterval(this.tick.bind(this), 19000)
   }
-
-  
-
-
-  
-  // generateRandomMessage() {
-  //   const newMessage = this.state.messageData[Math.floor(Math.random() * this.state.messageData.length)];
-  //   this.updateMessage(newMessage)
-  // }
-
-  // updateMessage(message) {
-  //   this.setState({
-  //     currentMessage: message
-  //   });
-  // }
 
   render() {
     return(
       <div className="message-container">
-        <h2 className="message-text">joajwoopawje</h2>
+        <h2 className="message-text">{this.generateRandomMessage()}</h2>
       </div>
     )
   };
