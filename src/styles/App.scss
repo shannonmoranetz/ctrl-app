@@ -12,6 +12,8 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 100vh;
+  z-index: 1;
+  position: relative;
 }
 
 .splash-container {
