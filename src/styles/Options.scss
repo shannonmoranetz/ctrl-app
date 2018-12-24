@@ -1,5 +1,17 @@
 .options-container {
   position: relative;
   margin-right: 600px;
-  margin-top: 50px;
+  margin-top: 20px;
+}
+
+.reset-button {
+  background-color: peru;
+  border-radius: 20px;
+  height: 60px;
+  width: 120px;
+  font-size: 25px;
+  font-family: Patrick Hand;
+  display: flex;
+  justify-content: center;  
+  margin-bottom: 20px;
 }

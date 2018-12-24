@@ -1,6 +1,14 @@
+.message-container {
+  background-color: pink;
+  height: 100px;
+  width: 400px;
+  margin-left: 700px;
+  margin-top: 60px;
+  border-radius: 20px;
+}
+
 .message-text { 
   color: white;
   position: relative;
-  margin-left: 600px;
-  margin-top: -50px;
+  margin: 15px;
 }

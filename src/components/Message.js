@@ -4,10 +4,9 @@ import '../../src/styles/main.scss';
 export default function Message() {
 
   return(
-    <div>
+    <div className="message-container">
       <h2 className="message-text">message</h2>
     </div>
   )
-
 };
 

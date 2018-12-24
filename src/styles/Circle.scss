@@ -1,10 +1,32 @@
 .circle-container {
-  color: black;
+  color: white;
   height: 350px;
   width: 350px;
-  background-color: $circle-color;
+  background-color: #04525D;
+  background-image: url("../../src/images/start-circle.png");
+  background-size: 350px;
+  background-repeat: no-repeat;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: breathing-pulse 19s infinite;
+}
+
+@keyframes breathing-pulse {
+  0% {
+    box-shadow: 0 0 0 0 #B5DAE1;
+  }
+  15% {
+    box-shadow: 0 0 40px 40px $circle-color;
+  }
+  55% {
+    box-shadow: 0 0 40px 40px white;
+  }
+  90% {
+    box-shadow: 0 0 5px 5px $circle-color;
+  }
+  100% {
+      box-shadow: 0 0 0 0 #04485D;
+  }
 }
