@@ -1,5 +1,40 @@
 # CTRL (control)
-## An app to guide your breathing during periods of anxiety.
-### Live on GitHub Pages: https://github.com/shannonmoranetz/ctrl-app
-![Splash Screen](https://i.imgur.com/H8yk8g5.jpg "Splash Screen")
-![App](https://i.imgur.com/bb0A0Zx.jpg "App")
+
+## Breathing guidance for anxiety
+
+* * *
+
+### Control anxious thoughts with guided breathing and periodic, positive messages.
+
+![Screenshot](https://i.imgur.com/bb0A0Zx.jpg)
+
+### Demo
+
+[Click to view live app demo](https://shannonmoranetz.github.io/ctrl-app/) 
+
+### Features
+
+*   Guided breathing
+*   Animated UI
+*   Randomized positive messages
+
+### Tech Stack
+
+*   React
+*   CSS ~ SCSS
+*   JSON data
+
+### Installation
+
+* Dependencies:
+```
+npm i
+```
+* Start:
+```
+npm start
+```
+
+### Contributors
+
+* [Shannon Moranetz](https://github.com/shannonmoranetz)
